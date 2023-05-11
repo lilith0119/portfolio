@@ -1,0 +1,135 @@
+@media screen and (max-width: 1210px) {
+  .name-and-image {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .text-box {
+    width: 90vw;
+    margin-bottom: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  h2 {
+    -ms-flex-item-align: unset;
+        -ms-grid-row-align: unset;
+        align-self: unset;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .portfolio-box {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .zola[class*='site'],
+  .improvity[class*='site'],
+  .lingvozone[class*='site'],
+  .experience .experience-box .experience {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 15px 0px;
+    -webkit-box-shadow: 0 -1px 11px black;
+            box-shadow: 0 -1px 11px black;
+    border-radius: .5em;
+  }
+  .zola[class*='site'] .text-box,
+  .improvity[class*='site'] .text-box,
+  .lingvozone[class*='site'] .text-box,
+  .experience .experience-box .experience .text-box {
+    width: 100%;
+    padding: 15px;
+  }
+  .zola[class*='site'] .text-box p,
+  .improvity[class*='site'] .text-box p,
+  .lingvozone[class*='site'] .text-box p,
+  .experience .experience-box .experience .text-box p {
+    line-height: 2;
+  }
+  .about-me-box .about-me-img-and-text {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 785px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .zola[class*='site'] .text-box,
+  .improvity[class*='site'] .text-box,
+  .lingvozone[class*='site'] .text-box,
+  .experience[class*='site'] .text-box {
+    width: 100%;
+  }
+  .zola[class*='site'] .text-box p,
+  .improvity[class*='site'] .text-box p,
+  .lingvozone[class*='site'] .text-box p,
+  .experience[class*='site'] .text-box p {
+    line-height: 2;
+  }
+  a.btn {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 10px 19px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .experience .text-box .icon-box .icon {
+    width: 50px;
+    height: 50px;
+  }
+  .experience .text-box .icon-box .icon img {
+    width: 32px !important;
+    top: -30%;
+    left: -12px;
+  }
+  .experience .text-box .icon-box .icon img[href*='html'] {
+    max-width: 75%;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .zola[class*='site'],
+  .improvity[class*='site'],
+  .lingvozone[class*='site'],
+  .experience .experience-box {
+    width: 90vw;
+  }
+  .about-me-box .about-me-img-and-text img {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about-me-box .about-me-img-and-text {
+    width: 85%;
+    gap: 15px;
+  }
+}
+/*# sourceMappingURL=media-style.css.map */

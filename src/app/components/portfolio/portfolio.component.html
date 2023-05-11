@@ -1,0 +1,46 @@
+<section>
+  <div class="main-container">
+    <h1 data-str="Portfolio">Portfolio</h1>
+    <span routerLink="">Main page</span>
+  </div>
+  <div class="portfolio-box">
+    <div class="animated-box">
+    </div>
+    <div class="portfolio">
+      <div class="link-box" *ngIf="hide_details">
+        <a href="https://zola.am" target="_blank" title="See the web site">zola.am</a>
+        <a href="https://improvity.am" target="_blank" title="See the web site">improvity.am</a>
+        <a href="https://lingvozone.am" target="_blank" title="See the web site">lingvozone.am</a>
+      </div>
+      <div class="site-pictures" *ngIf="hide_details">
+        <div class="img-box zola" (click)="showDetails('zola', 0)" title="Learn more">
+            <img src="./assets/images/sites/zola.PNG" alt="">
+        </div>
+        <div class="img-box improvity" (click)="showDetails('improvity', 1)" title="Learn more">
+            <img src="./assets/images/sites/improvity.PNG" alt="">
+        </div>
+        <div class="img-box lingvo" (click)="showDetails('lingvo', 2)" title="Learn more">
+            <img src="./assets/images/sites/lingvo.PNG" alt="">
+        </div>
+      </div>
+      <div class="information" *ngIf="!hide_details">
+        <div class="route-box">
+            <span class="route" routerLink="" title="Main page">Main page</span>
+            <span class="route" (click)="showDetails('back')" title="Go back">Go back</span>
+        </div>
+        <ng-container [ngSwitch]="info_type">
+          <div class="info-box">
+            <p *ngSwitchCase="'zola'" class="title">«zola»</p>
+            <p *ngSwitchCase="'improvity'" class="title">«improvity»</p>
+            <p *ngSwitchCase="'lingvo'" class="title">«lingvozone»</p>
+            <div class="text-box">
+              <p>{{description}}</p>
+              <a [href]="path" target="_blank">{{path_name}}</a>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <app-route-arrows [page_numbers]="[0, 1]"></app-route-arrows>
+</section>

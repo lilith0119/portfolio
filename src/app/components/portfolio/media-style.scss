@@ -1,0 +1,91 @@
+
+@media screen and (max-width: 1280px) {
+  
+.site-pictures{
+    height: unset !important;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+}
+
+@mixin img-box-transparent-text($content, $color) {
+    content: $content;
+            color: $color;
+            height: max-content;
+            position: absolute;
+            font-weight: 600;
+            font-size: calc(var(--main-font-size) + 25px);
+            z-index: 2;
+            opacity: 0.7;
+            @media screen and (max-width: 1000px) {
+                text-shadow: 
+                0px 0px 6px rgba(0, 0, 0), 
+                0px 0px 6px rgba(0, 0, 0),
+                0px 0px 6px rgba(0, 0, 0),
+                0px 0px 6px rgba(0, 0, 0);
+            }
+            @media screen and (max-width: 830px) {
+                font-size: 40px;
+            }
+            @media screen and (max-width: 400px) {
+                font-size: 30px;
+            }
+}
+
+@media screen and (max-width: 1251px) {
+    
+    .link-box{
+        display: none;
+    }
+    .img-box{
+        width: 350px !important;
+        height: 350px !important;
+        position: relative;
+        img{
+            height: inherit !important;
+            width: inherit !important;
+            object-fit: contain;
+        }
+        &.zola::after{
+            @include img-box-transparent-text("zola.am", #00AC4D)
+        }
+        &.improvity::after{
+            @include img-box-transparent-text("improvity.am", #8f7756)
+        }
+        &.lingvo::after {
+            @include img-box-transparent-text("lingvozone.am", #2AAFDB)
+        }
+    }
+}
+
+@media screen and (max-width: 906px) {
+    .img-box{
+        width: 35vw !important;
+        height: 35vw !important;
+    }
+    .info-box{
+        padding: 0;
+        text-align: justify;
+    }
+    .information{
+        transform: unset;
+        .text-box a {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .img-box{
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    .text-box {
+        padding: unset;
+        padding-top: 10px;
+    }
+}

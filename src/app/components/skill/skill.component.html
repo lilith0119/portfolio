@@ -1,0 +1,33 @@
+<section>
+  <div class="main-container">
+    <h1 data-str="Skills">Skills</h1>
+    <span routerLink="">Main page</span>
+  </div>
+  <app-cube [cube_content]="cube_images"></app-cube>
+  <div class="skills-container">
+    <div class="animated-box"></div>
+    <div class="skills-box">
+      <div class="content">
+        <div class="language-box">
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>SASS</p>
+          <p>Javascript</p>
+          <p>Typescript</p>
+          <p>Angular</p>
+        </div>
+        <div class="description">
+          <p>I like to work with real "HTML" structure.
+            maybe that's one of the reasons that draws me to it
+            "Angular" platform, and this portfolio is also written in "Angular".
+            In addition, Angular has
+            other advantages, but to be brief, it allows
+            easy to manipulate "HTML" structure.
+            I prefer to write the "style" of the site with SCSS.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-route-arrows [page_numbers]="[2, 3]"></app-route-arrows>
+</section>

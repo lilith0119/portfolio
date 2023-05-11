@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'app/style-variables/variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: var(--main-color);
+    -webkit-font-smoothing: antialiased;
+    ::selection{
+        background-color: #02fb026b;
+    }
+}
+html{
+    scroll-behavior: smooth;
+}

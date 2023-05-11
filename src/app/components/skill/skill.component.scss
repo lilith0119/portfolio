@@ -1,0 +1,90 @@
+@use '../../style-variables/variables.scss'as*;
+
+section {
+  @include section
+}
+
+h1 {
+  @include h1-title-shadow(data-str)
+}
+
+.main-container {
+  @include main-container;
+
+  span {
+    @include route-to-main-page
+  }
+}
+
+.skills-container {
+  @include animated-universal-container('.animated-box', '.skills-box');
+}
+
+$color-1: rgb(255, 100, 26, .5);
+$color-2: rgb(34, 153, 248, .5);
+$color-3: rgb(199, 100, 148, .5);
+$color-4: rgb(234, 219, 26, .5);
+$color-5: rgb(47, 116, 192, .5);
+$color-6: rgb(189, 0, 46, .5);
+
+$colors: $color-1,
+$color-2,
+$color-3,
+$color-4,
+$color-5,
+$color-6;
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+
+  .language-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    p {
+      font-size: calc(var(--main-font-size) + 2px);
+    }
+  }
+}
+
+@for $i from 1 through length($colors) {
+  .language-box p:nth-child(#{$i}) {
+    text-decoration: underline;
+    text-decoration-color: nth($colors, $i);
+  }
+}
+
+.description {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+
+  p {
+    font-size: calc(var(--main-font-size) - 2px);
+    line-height: 2;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  
+  .description {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: justify;
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  
+  .content {
+    padding: 0;
+  }
+}

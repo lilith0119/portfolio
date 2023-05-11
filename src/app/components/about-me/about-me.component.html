@@ -1,0 +1,44 @@
+<section>
+  <div class="main-container">
+    <h1 data-str="About me">About me</h1>
+    <span routerLink="">Main page</span>
+  </div>
+
+  <div class="container">
+    <div class="img-box">
+      <div class="gradient"></div>
+      <img [src]="img" alt="">
+    </div>
+    <div class="content-box" >
+      <div class="contend-and-img" [ngClass]="classArray[0]">
+        <img src="./assets/images/about-me/microphone.jpeg" alt="">
+          <p>{{description.sing_description}}</p>
+      </div>
+      <div class="contend-and-img" [ngClass]="classArray[1]">
+          <p>{{description.sport_description}}</p>
+        <img src="./assets/images/about-me/sport.jpg" alt="">
+      </div>
+      <div class="contend-and-img" [ngClass]="classArray[2]">
+        <img src="./assets/images/about-me/jewelry.jpg" alt="">
+          <p>{{description.jewelry_description}}</p>
+      </div>
+      <div class="contend-and-img" [ngClass]="classArray[3]">
+          <p>{{description.accountant_description}}</p>
+        <img src="./assets/images/about-me/accountant.jpg" alt="">
+      </div>
+      <div class="contend-and-img" [ngClass]="classArray[4]">
+        <img src="./assets/images/about-me/pc2.jpg" alt="">
+          <p>{{description.pc_description}}</p>
+      </div>
+      <div class="contend-and-img" [ngClass]="classArray[5]">
+          <p>{{description.manicure_description}}</p>
+        <img src="./assets/images/about-me/manicure.jpg" alt="">
+      </div>
+      <div class="contend-and-img" [ngClass]="classArray[6]">
+        <img src="./assets/images/about-me/guitar.jpg" alt="">
+          <p>{{description.music_description}}</p>
+      </div>
+    </div>
+  </div>
+  <app-route-arrows [page_numbers]="[3, 4]"></app-route-arrows>
+</section>

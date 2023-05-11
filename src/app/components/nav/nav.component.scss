@@ -1,0 +1,78 @@
+// @use '../../../style-variables/variables.scss' as *;
+
+nav{
+    display: flex;
+    background-color: var(--main-color-dark);
+    padding: 35px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    gap: 20px;
+    padding: 5px 0px;
+}
+
+.item{
+    color: #cccccc5b;
+    list-style: none;
+    text-transform: uppercase;
+    animation: show-text 1s forwards; 
+    transition: .2s;
+    cursor: pointer;
+    opacity: 0;
+    
+}
+ @keyframes show-text {
+    0% {}
+    100% {opacity: 1;}
+ }
+
+ @for $i from 1 to 6 {
+    $delay: ($i - 1) * .8;
+    .item:nth-child(#{$i + 1}) {
+        animation-delay: #{$delay}s;
+        position: relative;
+        &::after{
+            content: "";
+            width: 0;
+            height: .5px;
+            position: absolute;
+            background-color: var(--main-background-color);
+            bottom: -25%;
+            left: 0;
+            transition: .5s;
+        }
+        &:hover{
+            color:#cccccca4;
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+ }
+
+.fire-ball{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+    left: 50px;
+    background-color: var(--main-background-color);
+    filter: blur(6px);
+    transition: 1s ease-in-out;
+    animation: fire-show 6s ease-in-out;
+    transform: scale(.5) translateY(50%);
+    opacity: 0;
+}
+
+@keyframes fire-show {
+    0% {transform: translateY(0px) scale(1); width: 15px; height: 15px; opacity: 1;}
+    95% {transform: translateX(610px) scale(.6); width: 15px; height: 15px; opacity: 1;}
+    100% {transform: translateX(620px) scale(0); width: 5px; height: 5px;}
+}
+
+

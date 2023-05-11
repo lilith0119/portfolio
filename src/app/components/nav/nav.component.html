@@ -1,0 +1,10 @@
+<nav>
+    <ul [ngStyle]="setStyle()">
+        <div class="fire-ball"></div>
+        <li  class="item" (click)="scrollToBottom()">contacts</li>
+        <li  class="item" routerLink="portfolio" *ngIf="hide_items">portfolio</li>
+        <li  class="item" routerLink="experience" *ngIf="hide_items">experience</li>
+        <li  class="item" routerLink="skills" *ngIf="hide_items">skills</li>
+        <li  class="item" routerLink="about-me">about me</li>
+    </ul>
+</nav>

@@ -1,0 +1,36 @@
+@use '../../style-variables/variables.scss' as *;
+
+.btn-box {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .arrow i {
+      font-size: 65px;
+      cursor: pointer;
+      opacity: .7;
+      transition: .2s ease-in-out;
+  
+      &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+  
+      &:active {
+        transform: scale(1);
+      }
+    }
+  }
+  
+@media screen and (max-width: 600px) {
+  .btn-box{
+    width: 40vw;
+    height: max-content;
+    padding: 10px 0px;
+  }
+  .arrow i {
+    font-size: 10vw !important;
+  }
+}
